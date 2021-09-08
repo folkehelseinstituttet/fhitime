@@ -55,12 +55,31 @@ isoyearweek_c <- function(x = lubridate::today()){
 
 # isoxx_n ====
 
+#' ISO year (numeric) from Date object
+#'
+#' @param x a Date object or string, in the form of 'yyyy-mm-dd'
+#'
+#' @return ISO year in numeric
+#' @export
+#'
+#' @examples
+#' isoyear_n('2021-08-11')
+#' isoyear_n(lubridate::today())
 isoyear_n <- function(x = lubridate::today()) {
   yr <- as.numeric(isoyear_c(x))
   return(yr)
 }
 
-
+#' ISO week (numeric) from Date object
+#'
+#' @param x a Date object or string, in the form of 'yyyy-mm-dd'
+#'
+#' @return ISO week in numeric
+#' @export
+#'
+#' @examples
+#' isoweek_n('2021-08-11')
+#' isoweek_n(lubridate::today())
 isoweek_n <- function(x = lubridate::today()) {
   wk <- as.numeric(isoweek_c(x))
   return(wk)
