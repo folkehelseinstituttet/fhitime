@@ -1,0 +1,34 @@
+---
+title: "fhitime"
+output: rmarkdown::html_vignette
+author: "Chi Zhang"
+date: "2021-09-15"
+vignette: >
+  %\VignetteIndexEntry{fhitime}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+`fhitime` provides date time functions for public health purposes.
+
+It is part of the fhiverse.
+
+```{r setup}
+library(fhitime)
+```
+
+
+```{r}
+fhitime::isoweek_c(lubridate::today())
+```
+
+
