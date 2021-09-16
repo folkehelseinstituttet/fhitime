@@ -1,5 +1,5 @@
-#' isoyearweek_to_isoyear_n
-#' isoyearweek to year (numeric)
+#' ISO yearweek to year (numeric)
+#' 
 #' This function breaks the string connected with '-' into year/week
 #' @param yrwk Year-week, e.g. "2020-19" for 19th week in 2020
 #' @export
@@ -10,8 +10,8 @@ isoyearweek_to_isoyear_n <- function(yrwk){
 }
 
 
-#' isoyearweek_to_isoyear_c
-#' isoyearweek to year (character)
+#' ISO yearweek to year (character)
+#' 
 #' This function breaks the string connected with '-' into year/week
 #' @param yrwk Year-week, e.g. "2020-19" for 19th week in 2020
 #' @export
@@ -21,8 +21,8 @@ isoyearweek_to_isoyear_c <- function(yrwk){
   return(year_c)
 }
 
-#' isoyearweek_to_week_n
-#' isoyearweek to week (numeric)
+#' ISO yearweek to week (numeric)
+#' 
 #' This function breaks the string connected with '-' into year/week
 #' @param yrwk Year-week, e.g. "2020-19" for 19th week in 2020
 #' @export
@@ -33,8 +33,8 @@ isoyearweek_to_week_n <- function(yrwk){
 }
 
 
-#' isoyearweek_to_week_c
-#' isoyearweek to week (character)
+#' ISO yearweek to week (character)
+#' 
 #' This function breaks the string connected with '-' into year/week
 #' @param yrwk Year-week, e.g. "2020-19" for 19th week in 2020
 #' @export

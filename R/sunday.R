@@ -6,7 +6,6 @@
 #' @param keep_latest_date keep_latest_date (later)
 #'
 #' @import data.table
-#' @export
 keep_sundays_and_latest_date_internal <- function(dates, format = "Uke isoweek_c-1/isoweek_c", keep_delete = TRUE, keep_latest_date = TRUE){
   stopifnot(format %in% c("isoyearweek_c", "Uke isoweek_c", "isoyearweek_c-1/isoyearweek_c", "Uke isoweek_c-1/isoweek_c", "date"))
   values <- data.table::data.table(

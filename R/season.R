@@ -1,27 +1,27 @@
-#' week_to_seasonweek_n
-#' Natural week to season week. Season week 1 is natural week 30.
-#' @param week Natural week in a year
+#' ISO week to season week (numeric). Season week 1 is natural week 30.
+#' @param isoweek ISO week in a year
 #' @export
-week_to_seasonweek_n <- function(week){
+isoweek_to_seasonweek_n <- function(isoweek){
   # take both char/n in input
   
   # real week 30 is the start of season, week 1
   # original: fhi::x(20)
-  if(week>53 | week <1){stop("natural week needs to be between 1 to 53")}
+  if(isoweek>53 | isoweek <1){stop("natural week needs to be between 1 to 53")}
   
-  retval <- week
-  retval[week >= 30] <- week[week >= 30] - 29
-  retval[week < 30] <- week[week < 30] + 23
-  retval[week == 53] <- 23.5
+  retval <- isoweek
+  retval[isoweek >= 30] <- isoweek[isoweek >= 30] - 29
+  retval[isoweek < 30] <- isoweek[isoweek < 30] + 23
+  retval[isoweek == 53] <- 23.5
   
   return(retval)
 }
 
-#' seasonweek_to_week_c
-#' Season week to natural week. Season week 1 is natural week 30.
+
+#' Season week to ISO week (character). Season week 1 is ISO week 30.
+#' 
 #' @param seasonweek Season week in a year
 #' @export
-seasonweek_to_week_c <- function(seasonweek){
+seasonweek_to_isoweek_c <- function(seasonweek){
   # influenza week 1 (x) is real week 30
   if(seasonweek >52 | seasonweek<1){stop("seasonweek needs to be between 1 to 52, or 23.5")}
   
@@ -35,11 +35,14 @@ seasonweek_to_week_c <- function(seasonweek){
   return(retval)
 }
 
-#' seasonweek_to_week_n
-#' Season week to natural week. Season week 1 is natural week 30.
+
+
+
+#' Season week to ISO week (numeric). Season week 1 is ISO week 30.
+#' 
 #' @param seasonweek Season week in a year
 #' @export
-seasonweek_to_week_n <- function(seasonweek){
+seasonweek_to_isoweek_n <- function(seasonweek){
   # influenza week 1 (x) is real week 30
   if(seasonweek >52 | seasonweek<1){stop("seasonweek needs to be between 1 to 52, or 23.5")}
   

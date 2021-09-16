@@ -2,9 +2,7 @@
 % Please edit documentation in R/yearweek_split.R
 \name{isoyearweek_to_isoyear_n}
 \alias{isoyearweek_to_isoyear_n}
-\title{isoyearweek_to_isoyear_n
-isoyearweek to year (numeric)
-This function breaks the string connected with '-' into year/week}
+\title{ISO yearweek to year (numeric)}
 \usage{
 isoyearweek_to_isoyear_n(yrwk)
 }
@@ -12,7 +10,5 @@ isoyearweek_to_isoyear_n(yrwk)
 \item{yrwk}{Year-week, e.g. "2020-19" for 19th week in 2020}
 }
 \description{
-isoyearweek_to_isoyear_n
-isoyearweek to year (numeric)
 This function breaks the string connected with '-' into year/week
 }
