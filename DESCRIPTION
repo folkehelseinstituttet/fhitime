@@ -9,7 +9,7 @@ Authors@R: c(
     comment = c(ORCID = "0000-0002-6747-1726")
   ))
 Description: Provides easy and consistent time conversion for public health purposes.
-License: MIT 
+License: MIT + file LICENSE
 URL: https://folkehelseinstituttet.github.io/fhitime, https://github.com/folkehelseinstituttet/fhitime
 BugReports: https://github.com/folkehelseinstituttet/fhitime/issues
 Encoding: UTF-8

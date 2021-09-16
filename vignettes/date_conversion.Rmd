@@ -1,5 +1,5 @@
 ---
-title: "Time conversion"
+title: "Date, year, week conversion"
 author: "Chi Zhang"
 date: "`r Sys.Date()`"
 output:
@@ -7,7 +7,7 @@ output:
     fig_width: 6
     fig_height: 6
 vignette: >
-  %\VignetteIndexEntry{Time conversion}
+  %\VignetteIndexEntry{Date, year, week conversion}
   %\VignetteEncoding{UTF-8}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
@@ -35,20 +35,21 @@ library(magrittr)
 ```
 
 
-## Which year/week is it?
+## Which year/week is this date?
 
 By default the functions returns the isoyear or isoweek of **today**. 
 
 ```{r}
-isoyear_c()
-isoyear_n()
-isoweek_c()
-isoweek_n()
+date_to_isoyear_c()
+date_to_isoyear_n()
+date_to_isoweek_c()
+date_to_isoweek_n()
 # provide a date
-isoyear_c('2021-01-01')
-isoyear_n('2021-01-01')
-isoweek_c('2021-01-01')
-isoweek_n('2021-01-01')
+date_to_isoyear_c('2021-01-01')
+date_to_isoyear_n('2021-01-01')
+date_to_isoweek_c('2021-01-01')
+date_to_isoweek_n('2021-01-01')
+date_to_isoyearweek_c('2021-08-11')
 ```
 
 
@@ -59,8 +60,8 @@ isoweek_n('2021-01-01')
 ```{r}
 isoyearweek_to_isoyear_c("2021-02")
 isoyearweek_to_isoyear_n("2021-02")
-isoyearweek_to_week_c("2021-02")
-isoyearweek_to_week_n("2021-02")
+isoyearweek_to_isoweek_c("2021-02")
+isoyearweek_to_isoweek_n("2021-02")
 ```
 
 

@@ -11,7 +11,7 @@ keep_sundays_and_latest_date_internal <- function(dates, format = "Uke isoweek_c
   values <- data.table::data.table(
     date = dates,
     order = 1:length(dates),
-    isoyearweek = isoyearweek_c(dates)
+    isoyearweek = date_to_isoyearweek_c(dates)
   )
   data.table::setorder(values, -date)
   values[, n := 1:.N, by=.(isoyearweek)]
@@ -25,22 +25,22 @@ keep_sundays_and_latest_date_internal <- function(dates, format = "Uke isoweek_c
   if(format == "isoyearweek_c"){
     values[
       date %in% world_dates_isoyearweek$sun,
-      time_description := paste0(isoyearweek_c(date))
+      time_description := paste0(date_to_isoyearweek_c(date))
     ]
   } else if(format == "Uke isoweek_c"){
     values[
       date %in% world_dates_isoyearweek$sun,
-      time_description := paste0("Uke ",isoweek_c(date))
+      time_description := paste0("Uke ",date_to_isoweek_c(date))
     ]
   } else if(format == "isoyearweek_c-1/isoyearweek_c"){
     values[
       date %in% world_dates_isoyearweek$sun,
-      time_description := paste0(isoyearweek_c(date-7), "/", isoyearweek_c(date))
+      time_description := paste0(date_to_isoyearweek_c(date-7), "/", date_to_isoyearweek_c(date))
     ]
   } else if(format == "Uke isoweek_c-1/isoweek_c"){
     values[
       date %in% world_dates_isoyearweek$sun,
-      time_description := paste0("Uke ",isoweek_c(date-7),"/", isoweek_c(date))
+      time_description := paste0("Uke ",date_to_isoweek_c(date-7),"/", date_to_isoweek_c(date))
     ]
   } else if(format == "date"){
     values[
@@ -78,6 +78,7 @@ keep_sundays_and_latest_date <- function(dates, format = "Uke isoweek_c-1/isowee
   )
   return(retval)
 }
+
 
 
 #' keep_sundays
