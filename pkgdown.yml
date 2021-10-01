@@ -1,0 +1,10 @@
+pandoc: '2.13'
+pkgdown: 1.6.1
+pkgdown_sha: ~
+articles:
+  date_conversion: date_conversion.html
+  fhidata_placeholder: fhidata_placeholder.html
+  fhitime: fhitime.html
+  season: season.html
+last_built: 2021-10-01T13:50Z
+
