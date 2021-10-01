@@ -22,7 +22,8 @@ Imports:
     lubridate,
     magrittr,
     purrr,
-    stringr
+    stringr,
+    fhidata
 Suggests: 
     testthat (>= 3.0.0),
     knitr,
